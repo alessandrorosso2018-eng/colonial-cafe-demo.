@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colonial Cafe - Rozzano</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:#f5f1ea;
+color:#2f2f2f;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+background:#1f1f1f;
+color:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h1{
+font-family:'Playfair Display', serif;
+font-size:22px;
+margin:0;
+}
+
+nav ul{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+gap:25px;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+/* Dropdown */
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:180px;
+top:30px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a{
+color:#2f2f2f;
+padding:10px;
+display:block;
+}
+
+nav ul li:hover .dropdown-content{
+display:block;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+header h2{
+font-family:'Playfair Display', serif;
+font-size:50px;
+margin:0;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#c6a75e;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+/* SECTIONS */
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h3{
+text-align:center;
+font-family:'Playfair Display', serif;
+margin-bottom:40px;
+font-size:32px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:25px;
+}
+
+.menu-item{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.menu-item h4{
+margin-top:0;
+}
+
+.price{
+color:#c6a75e;
+font-weight:600;
+}
+
+.review{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+footer{
+background:#1f1f1f;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+background:#c6a75e;
+border:none;
+color:white;
+border-radius:25px;
+cursor:pointer;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+text-decoration:none;
+padding:10px 20px;
+border-radius:25px;
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+transition: transform 0.3s;
+}
+
+.social-links a:hover{
+transform:scale(1.05);
+}
+
+.facebook{
+color:#3b5998;
+border:1px solid #3b5998;
+}
+
+.instagram{
+color:#C13584;
+border:1px solid #C13584;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h1>Colonial Cafe</h1>
+<ul>
+<li><a href="#home">Home</a></li>
+<li>
+<a href="#">Menu ▾</a>
+<div class="dropdown-content">
+<a href="#colazioni">Colazioni</a>
+<a href="#pranzi">Pranzi</a>
+<a href="#aperitivi">Aperitivi</a>
+<a href="#dolci">Dolci</a>
+<a href="#bevande">Bevande</a>
+</div>
+</li>
+<li><a href="#recensioni">Recensioni</a></li>
+<li><a href="#contatti">Contatti</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<header id="home">
+<h2>Il tuo momento perfetto a Rozzano</h2>
+<p>Colazioni, pranzi veloci e aperitivi premium</p>
+<a href="#chi-siamo" class="btn">Scopri di più</a>
+</header>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo">
+<h3>Chi Siamo</h3>
+<p style="text-align:center; max-width:700px; margin:auto;">
+Colonial Cafe è il punto di riferimento a Rozzano per chi cerca qualità,
+accoglienza e un ambiente elegante dove rilassarsi dalla mattina all'aperitivo.
+</p>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+<h3>Il Nostro Menu</h3>
+
+<!-- Colazioni -->
+<section id="colazioni">
+<h3>☕ Colazioni</h3>
+<div class="menu-grid">
+<div class="menu-item"><h4>Cappuccino Artigianale</h4><p class="price">€1,80</p></div>
+<div class="menu-item"><h4>Caffè Speciality</h4><p class="price">€1,50</p></div>
+<div class="menu-item"><h4>Latte Macchiato</h4><p class="price">€2,00</p></div>
+<div class="menu-item"><h4>Brioches Farcite</h4><p class="price">€1,80</p></div>
+<div class="menu-item"><h4>Pancake con Sciroppo</h4><p class="price">€5,00</p></div>
+<div class="menu-item"><h4>Colazione Completa</h4><p class="price">€4,50</p></div>
+</div>
+</section>
+
+<!-- Pranzi -->
+<section id="pranzi">
+<h3>🥪 Pranzi & Snack</h3>
+<div class="menu-grid">
+<div class="menu-item"><h4>Toast Colonial</h4><p class="price">€5,00</p></div>
+<div class="menu-item"><h4>Club Sandwich</h4><p class="price">€7,50</p></div>
+<div class="menu-item"><h4>Panino Gourmet</h4><p class="price">€6,50</p></div>
+<div class="menu-item"><h4>Insalatona Fresh</h4><p class="price">€7,00</p></div>
+<div class="menu-item"><h4>Piadina Artigianale</h4><p class="price">€6,00</p></div>
+<div class="menu-item"><h4>Tagliere Salumi & Formaggi</h4><p class="price">€10,00</p></div>
+</div>
+</section>
+
+<!-- Aperitivi -->
+<section id="aperitivi">
+<h3>🍹 Aperitivi & Cocktail</h3>
+<div class="menu-grid">
+<div class="menu-item"><h4>Spritz Classico</h4><p class="price">€6,00</p></div>
+<div class="menu-item"><h4>Negroni Premium</h4><p class="price">€8,00</p></div>
+<div class="menu-item"><h4>Mojito</h4><p class="price">€7,00</p></div>
+<div class="menu-item"><h4>Americano</h4><p class="price">€7,00</p></div>
+<div class="menu-item"><h4>Gin Tonic Selection</h4><p class="price">€9,00</p></div>
+<div class="menu-item"><h4>Aperitivo Analcolico</h4><p class="price">€5,00</p></div>
+</div>
+</section>
+
+<!-- Dolci -->
+<section id="dolci">
+<h3>🍰 Dolci della Casa</h3>
+<div class="menu-grid">
+<div class="menu-item"><h4>Tiramisù</h4><p class="price">€4,50</p></div>
+<div class="menu-item"><h4>Cheesecake</h4><p class="price">€4,50</p></div>
+<div class="menu-item"><h4>Torta del Giorno</h4><p class="price">€4,00</p></div>
+<div class="menu-item"><h4>Crostate Artigianali</h4><p class="price">€4,00</p></div>
+</div>
+</section>
+
+<!-- Bevande -->
+<section id="bevande">
+<h3>🥤 Bevande</h3>
+<div class="menu-grid">
+<div class="menu-item"><h4>Spremuta Fresca</h4><p class="price">€3,50</p></div>
+<div class="menu-item"><h4>Centrifughe Detox</h4><p class="price">€4,50</p></div>
+<div class="menu-item"><h4>Acqua</h4><p class="price">€1,50</p></div>
+<div class="menu-item"><h4>Bibite</h4><p class="price">€3,00</p></div>
+</div>
+</section>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+<h3>Seguici sui Social</h3>
+<div class="social-links">
+<a href="https://www.facebook.com/colonialcafe" target="_blank" class="facebook">📘 Facebook</a>
+<a href="https://www.instagram.com/colonialcafe" target="_blank" class="instagram">📸 Instagram</a>
+</div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni">
+<h3>Recensioni Clienti</h3>
+<div class="review">⭐⭐⭐⭐⭐ <p>"Ambiente elegante e aperitivo top!"</p><strong>- Martina R.</strong></div>
+<div class="review">⭐⭐⭐⭐⭐ <p>"Colazione fantastica, tornerò!"</p><strong>- Luca P.</strong></div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+<h3>Contattaci</h3>
+<form>
+<input type="text" placeholder="Il tuo nome">
+<textarea rows="4" placeholder="Scrivi un messaggio..."></textarea>
+<button type="submit">Invia</button>
+</form>
+</section>
+
+<footer>
+<p><strong>Colonial Cafe</strong></p>
+<p>Piazza Alboreto Michele, 20089 Rozzano (MI)</p>
+<p>© 2026 Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
